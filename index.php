@@ -201,10 +201,13 @@ if(!empty($html)){//check whether the html is returned or not
      if($image->length>0)
      {
         $image_src=$image[0]->getAttribute('src');
+        $image_src1=$image[0]->getAttribute('data-old-hires');
      }
     if($image_books->length>0)
      {
         $image_src=$image_books[0]->getAttribute('src');
+         
+
      }
      if($price->length>0)
      {
@@ -240,7 +243,7 @@ if(!empty($html)){//check whether the html is returned or not
      echo "NAME :".$name_val."<br>";
      echo "PRICE :".$price_val."<br>";
      echo "DISCOUNT: ".$discount_final." %"."<br>";
-     echo "<img src='$image_src'>"."<br>";
+     echo "<img height='250px' width='150px' src='$image_src1'>"."<br>";
      echo   '<button onclick="disply();" style="width:auto;">Manage Discount</button><div id="id01" class="modal">  <form class="modal-content animate" action="action_page.php"><div class="container"><label for="Email"><b>Email:</b></label><input type="email" placeholder="Enter email" name="email" required><label for="psw"><b>Discount Wanted</b></label><input type="number" placeholder="Enter wanted discount" name="psw" required><label for="url:"><b>url:</b></label><input type="text" id="url" placeholder="url will here in a sec" name="url" value="" required><button type="submit">Add to cart</button></div><div class="container" style="background-color:#f1f1f1"><button type="button" onclick="hide();" class="cancelbtn">Cancel</button></div></form></div>';
 }
 }    
