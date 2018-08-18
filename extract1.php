@@ -87,8 +87,8 @@ if ($query) {
     $mail->Host = "smtp.gmail.com";
     $mail->Port = 587; // or 587
     $mail->IsHTML(true);
-    $mail->Username = "noreplyreckoner@gmail.com";
-    $mail->Password = "reckoner@31";
+    $mail->Username = "EMAIL ID";
+    $mail->Password = "PASSWORD";
     $mail->SetFrom("noreplyreckoner@gmail.com","max");
     $mail->Subject = "DISCOUNT ACHIEVED :RECKONER";
     $mail->Body = $msg;
