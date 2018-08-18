@@ -19,7 +19,7 @@ input#search-bar{
   margin: 0 auto;
   width: 100%;
   height: 45px;
-  padding: 0 20px;
+  padding-right:40px;
   font-size: 1rem;
   border: 1px solid #D0CFCE;
   outline: none;
@@ -48,6 +48,7 @@ input#search-bar{
   height: 75px;
   top: -62px;
   right: -10px;
+    
 }
             input[type=number], input[type=email],input[type=text] {
     width: 100%;
@@ -204,6 +205,9 @@ span.psw {
        width: 100%;
     }
 }
+            #butt{
+                cursor: pointer;
+            }
             #image{
                 display: block;
                 margin-left: auto;
@@ -233,7 +237,7 @@ span.psw {
     <img src="img/logo3.png" id="image">
     <form class="search-container" method="get">
     <input type="text" id="search-bar" placeholder="Enter The Url of the item" name="search">
-    <a href="<?php $a=$_GET['search'];echo $a; ;?> >"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+    <img onclick="urlGetter();" id="butt" class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
   </form>
     </div>
     <script>
@@ -265,6 +269,19 @@ function disply()
     <script>
         window.onload=function(){
             document.getElementById('search-bar').focus();
+        }
+    </script>
+    <script>
+        function urlGetter()
+        {
+            window.location.href="index.php/?search="+"<?php echo $_GET['search'];?>"
+        }
+    </script>
+    <script>
+         function urlGetter()
+        {
+            var a = document.getElementById('search-bar').value;
+            window.location.href="index.php?search="+a;
         }
     </script>
 </body>
