@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Reckoner</title>
         <style>
             body{
@@ -69,7 +71,7 @@ input#search-bar{
            
         <form class="search-container" method="get" >
     <input type="text" id="search-bar" name="search" placeholder="Enter The Url of the item">
-    <a href="" name="sub"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+    <a href="<?php echo '?search='.$_GET['search'];?>" name="sub"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
   </form>
             <img src="img/logo3.png" id="right">
         </div>

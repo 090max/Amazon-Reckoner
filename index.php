@@ -1,9 +1,12 @@
 
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <style>
              body{
   padding-top: 75px;
+                 overflow: hidden;
 }
 
 .search-container{
@@ -207,6 +210,22 @@ span.psw {
                 margin-right: auto;
                 width: 15%;
             }
+            @media only screen and (max-width: 480px) {
+                #image{
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    transform: scale(5);
+                    z-index: 0;
+                }
+                .search-container{
+                 width: 90%;
+                 display: block;
+                 margin: 6em auto;
+                    z-index: 100;
+}
+                
+}
         </style>
     </head>
 <body>
@@ -214,10 +233,11 @@ span.psw {
     <img src="img/logo3.png" id="image">
     <form class="search-container" method="get">
     <input type="text" id="search-bar" placeholder="Enter The Url of the item" name="search">
-    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+    <a href="<?php $a=$_GET['search'];echo $a; ;?> >"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
   </form>
     </div>
     <script>
+        
 // Get the modal
 var modal = document.getElementById('id01');
 
@@ -240,7 +260,13 @@ function disply()
         {
             document.getElementById('id01').style.display='none'
         }
+        
 </script>
+    <script>
+        window.onload=function(){
+            document.getElementById('search-bar').focus();
+        }
+    </script>
 </body>
 <html>
 
