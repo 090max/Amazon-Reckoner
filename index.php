@@ -2,6 +2,50 @@
 <html>
     <head>
         <style>
+             body{
+  padding-top: 75px;
+}
+
+.search-container{
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+input#search-bar{
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid #D0CFCE;
+  outline: none;
+  &:focus{
+    border: 1px solid #008ABF;
+    transition: 0.35s ease;
+    color: #008ABF;
+    &::-webkit-input-placeholder{
+      transition: opacity 0.45s ease; 
+  	  opacity: 0;
+     }
+    &::-moz-placeholder {
+      transition: opacity 0.45s ease; 
+  	  opacity: 0;
+     }
+    &:-ms-placeholder {
+     transition: opacity 0.45s ease; 
+  	 opacity: 0;
+     }    
+   }
+ }
+.search-icon{
+  position: relative;
+  float: right;
+  width: 75px;
+  height: 75px;
+  top: -62px;
+  right: -10px;
+}
             input[type=number], input[type=email],input[type=text] {
     width: 100%;
     padding: 12px 20px;
@@ -9,6 +53,44 @@
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+#name{
+    border-radius: 8px;
+    text-align: center;
+}
+
+body{
+        background-image:url('index-back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow-x: hidden;
+
+}
+            #show_product{
+    border:3px solid blue;
+                border-left: none;
+                border-right: none;
+                border-bottom:none;
+                position: absolute;
+                left: 0px;
+                width:92%;
+     top: 20%;
+    padding: 10vh;
+}
+.prod_info
+{
+    float:left;
+    margin-top: 7vh;
+    color: black;
+
+}
+.img_info{
+      margin-top: 1vh;
+    float:right;
+}
+.bttn_prod{
+    clear: both;
 }
 
 /* Set a style for all buttons */
@@ -119,14 +201,22 @@ span.psw {
        width: 100%;
     }
 }
+            #image{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 15%;
+            }
         </style>
     </head>
 <body>
-<center><form method="GET">
-<input id="name" type="text" name="search" placeholder="ENTER URL"><br><br>
-<input type="submit" id="sub">
-</form>
-</center>
+<div id="first_one">
+    <img src="img/logo3.png" id="image">
+    <form class="search-container" method="get">
+    <input type="text" id="search-bar" placeholder="Enter The Url of the item" name="search">
+    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+  </form>
+    </div>
     <script>
 // Get the modal
 var modal = document.getElementById('id01');
@@ -158,6 +248,10 @@ function disply()
 <!--<p id="demo">c</p>-->
 <?php
 if(isset($_GET['search'])){
+    echo "<script>
+      document.getElementById('first_one').style.display='none';
+    </script>";
+    include 'start.php';
 	$name=$_GET['search'];
  @$html = file_get_contents($name);// for getting the htmlusing @ on starting to avoid warnings 
  $link= new DOMDocument();
@@ -240,11 +334,22 @@ if(!empty($html)){//check whether the html is returned or not
         $discount=$percent_t1[0]->nodeValue;
         $discount_final= discount_calc($discount);
      }
+     echo"<div id='show_product'>";
+     echo"<div class='prod_info'>";
      echo "NAME :".$name_val."<br>";
      echo "PRICE :".$price_val."<br>";
      echo "DISCOUNT: ".$discount_final." %"."<br>";
+     echo'</div>';
+     echo"<div class='img_info'>";
      echo "<img height='250px' width='150px' src='$image_src1'>"."<br>";
+     echo'</div>';
+     echo"<center>";
+     echo"<div class='bttn_prod'>";
      echo   '<button onclick="disply();" style="width:auto;">Manage Discount</button><div id="id01" class="modal">  <form class="modal-content animate" action="action_page.php"><div class="container"><label for="Email"><b>Email:</b></label><input type="email" placeholder="Enter email" name="email" required><label for="psw"><b>Discount Wanted</b></label><input type="number" placeholder="Enter wanted discount" name="psw" required><label for="url:"><b>url:</b></label><input type="text" id="url" placeholder="url will here in a sec" name="url" value="" required><button type="submit">Add to cart</button></div><div class="container" style="background-color:#f1f1f1"><button type="button" onclick="hide();" class="cancelbtn">Cancel</button></div></form></div>';
+     echo'</div>';
+     echo"</center>";
+     echo'</div>';
 }
-}    
+}  
+    include 'end.php';
 ?>
