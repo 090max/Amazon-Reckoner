@@ -70,12 +70,12 @@ input#search-bar{
             @media only screen and (max-width: 480px)
             {
                 body{
-                    overflow-x: hidden;
-                    width:100vw;
+                    overflow: hidden;
+                    width:100%;
                     margin:0;
                 }
                 #abs{
-                    width: 100vw;
+                    width: 100%;
                     position:absolute
                 }
                 #right{

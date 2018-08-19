@@ -144,7 +144,7 @@ span.psw {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 200; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -197,6 +197,9 @@ span.psw {
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
+    body{
+        overflow: hidden;
+    }
     span.psw {
        display: block;
        float: none;
