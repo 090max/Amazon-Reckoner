@@ -21,10 +21,8 @@ margin-right: 10vw;
 input#search-bar{
   margin: 0 auto;
   width: 100%;
-  height: 7vh;
-  overflow: auto;
-    z-index:0;
-    padding-right: 5vw;
+  height: 45px;
+  padding-right:40px;
   font-size: 1rem;
   border: 1px solid #D0CFCE;
   outline: none;
@@ -47,13 +45,13 @@ input#search-bar{
    }
  }
 .search-icon{
-  position: absolute;
+  position: relative;
   float: right;
-  width: 4vw;
-  height: 8vh;
-  margin-top:-8.5vh;
-   margin-left:29.5vw;
-    z-index: 1;
+  width: 75px;
+  height: 75px;
+  top: -62px;
+  right: -10px;
+    
 }
             #abs{
                 position: absolute;
@@ -82,23 +80,25 @@ input#search-bar{
                 }
                 #right{
                     position: absolute;
-                    top: -45%;
+                    top: -50%;
                     left: 15%;
                 }
              #search-bar{
                     position: relative;
-                    left: 20vw;
-                    transform: scaleX(1.2);     
+                    left: -40vw;
+                    transform: scaleX(1.5);
+                 width: 90%;
                     padding-right: 4vw;
-                     
+                 
                     
                 }
                 .search-icon{
-   position: absolute;
+   position: relative;
   float: right;
-  width: 5.5vw;
-  height: 8vh;
-  margin-top:-8.5vh;
+  width: 75px;
+  height: 75px;
+  top: -62px;
+  right: -10px;
    margin-left:80.5vw;
     z-index: 1
                 }
@@ -118,7 +118,7 @@ input#search-bar{
            <img src="img/logo3.png" id="right">
         <form class="search-container" method="get" >
     <input type="text" id="search-bar" name="search" placeholder="Enter The Url of the item">
-    <a href="<?php echo '?search='.$_GET['search'];?>" name="sub"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+    <a href="<?php echo '?search='.$_GET['search'];?>" name="sub"><img class="search-icon" src="img/icon.png"></a>
   </form>
             
         </div>
