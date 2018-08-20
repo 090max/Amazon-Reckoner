@@ -2,6 +2,10 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="description" content="discount manager">
+        <meta name="keywords" content="amazon,amazon discount,discount manager">
+
+        <link rel="icon" href="icon.png">
 
         <style>
              body{
@@ -29,15 +33,15 @@ input#search-bar{
     color: #008ABF;
     &::-webkit-input-placeholder{
       transition: opacity 0.45s ease; 
-  	  opacity: 0;
+      opacity: 0;
      }
     &::-moz-placeholder {
       transition: opacity 0.45s ease; 
-  	  opacity: 0;
+      opacity: 0;
      }
     &:-ms-placeholder {
      transition: opacity 0.45s ease; 
-  	 opacity: 0;
+     opacity: 0;
      }    
    }
  }
@@ -64,8 +68,7 @@ input#search-bar{
 }
 
 body{
-        background-image:url('index-back.jpg');
-    background-size: cover;
+        background-color: #fafafa;
     background-repeat: no-repeat;
     height: 100vh;
     overflow-x: hidden;
@@ -144,7 +147,7 @@ span.psw {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 200; /* Sit on top */
+    z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -197,9 +200,6 @@ span.psw {
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
-    body{
-        overflow: hidden;
-    }
     span.psw {
        display: block;
        float: none;
@@ -274,16 +274,12 @@ function disply()
             document.getElementById('search-bar').focus();
         }
     </script>
-    <script>
-        function urlGetter()
-        {
-            window.location.href="index.php/?search="+"<?php echo $_GET['search'];?>"
-        }
-    </script>
+
     <script>
          function urlGetter()
         {
             var a = document.getElementById('search-bar').value;
+        
             window.location.href="index.php?search="+a;
         }
     </script>
@@ -298,25 +294,25 @@ if(isset($_GET['search'])){
       document.getElementById('first_one').style.display='none';
     </script>";
     include 'start.php';
-	$name=$_GET['search'];
+    $name=$_GET['search'];
  @$html = file_get_contents($name);// for getting the htmlusing @ on starting to avoid warnings 
  $link= new DOMDocument();
 libxml_use_internal_errors(TRUE);//disable libxml errors
 if(!empty($html)){//check whether the html is returned or not
               $link->loadHTML($html);
-	libxml_clear_errors(); //remove errors for yucky html
-	
-	$link_xpath = new DOMXPath($link);
-	//get all the h2's with an id
+    libxml_clear_errors(); //remove errors for yucky html
+    
+    $link_xpath = new DOMXPath($link);
+    //get all the h2's with an id
 
-	
+    
          
           $discount_final=0;
           $name_val="UNTITLED";
           
             
-    	$image = $link_xpath->query('//div[@id="imgTagWrapperId"]/img[@id="landingImage"]');
-    	//$price =$link_xpath->query('//td[@class="a-span12 a-color-secondary a-size-base"]/span[@class="a-text-strike"]');
+        $image = $link_xpath->query('//div[@id="imgTagWrapperId"]/img[@id="landingImage"]');
+        //$price =$link_xpath->query('//td[@class="a-span12 a-color-secondary a-size-base"]/span[@class="a-text-strike"]');
         $price =$link_xpath->query('//td[@class="a-span12"]/span[@id="priceblock_saleprice"]');
         $price_deal=$link_xpath->query('//td[@class="a-span12"]/span[@id="priceblock_dealprice"]');
         $our_price=$link_xpath->query('//td[@class="a-span12"]/span[@id="priceblock_ourprice"]');
