@@ -9,7 +9,7 @@
 
 <a href=""><img src="img/2.jpg" title="Reckoner" alt="Reckoner"></a>
 
-<a href=""><img src="img/1.jpg" title="Reckoner" alt="Reckoner"></a>
+<a href=""><img src="img/3.jpg" title="Reckoner" alt="Reckoner"></a>
 
 
 > Tips
