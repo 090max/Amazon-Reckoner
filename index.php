@@ -376,10 +376,13 @@ if(!empty($html)){//check whether the html is returned or not
         $discount=$percent_t1[0]->nodeValue;
         $discount_final= discount_calc($discount);
      }
+     
      echo"<div id='show_product'>";
      echo"<div class='prod_info'>";
      echo "NAME :".$name_val."<br>";
+     if(isset($prince_val)){
      echo "PRICE :".$price_val."<br>";
+    // set_error_handler("customError");
      echo "DISCOUNT: ".$discount_final." %"."<br>";
      echo'</div>';
      echo"<div class='img_info'>";
@@ -391,6 +394,15 @@ if(!empty($html)){//check whether the html is returned or not
      echo'</div>';
      echo"</center>";
      echo'</div>';
+     }else{
+         echo"<div class='img_info'>";
+     echo "<img height='250px' width='150px' src='$image_src1'>"."<br>";
+     echo'</div>';
+        echo "<h1 font-color='red'>Not in stock</h1>";
+     }
+
+//set error handler
+
 }
 }  
     include 'end.php';
