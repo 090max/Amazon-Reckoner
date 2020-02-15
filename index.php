@@ -316,11 +316,11 @@ if(!empty($html)){//check whether the html is returned or not
         $price =$link_xpath->query('//td[@class="a-span12"]/span[@id="priceblock_saleprice"]');
         $price_deal=$link_xpath->query('//td[@class="a-span12"]/span[@id="priceblock_dealprice"]');
         $our_price=$link_xpath->query('//td[@class="a-span12"]/span[@id="priceblock_ourprice"]');
-        $percent=$link_xpath->query('//tr[@id="dealprice_savings"]/td[@class="a-span12 a-color-price a-size-base"]');
+        $percent=$link_xpath->query('//tr[@id="dealprice_savings"]/td[@class="a-span12 a-color-price a-size-base priceBlockSavingsString"]');
         $price_book=$link_xpath->query('//div[@id="soldByThirdParty"]/span[@class="a-size-medium a-color-price inlineBlock-display offer-price a-text-normal price3P"]');
         $image_books = $link_xpath->query('//img[@id="imgBlkFront"]');
         $percent_books=$link_xpath->query('//div[@id="buyNewInner"]/div[@id="buyBoxInner"]/ul[@class="a-unordered-list a-nostyle a-vertical"]/li/span[@class="a-list-item"]/span[@class="a-size-base a-color-secondary"]');
-       $percent_t1=$link_xpath->query('//tr[@id="regularprice_savings"]/td[@class="a-span12 a-color-price a-size-base"]');
+       $percent_t1=$link_xpath->query('//tr[@id="regularprice_savings"]/td[@class="a-span12 a-color-price a-size-base priceBlockSavingsString"]');
        $name=$link_xpath->query('//span[@id="productTitle"]');
      function discount_calc($discount)
      {
@@ -387,7 +387,7 @@ if(!empty($html)){//check whether the html is returned or not
      echo'</div>';
      echo"<center>";
      echo"<div class='bttn_prod'>";
-     echo   '<button onclick="disply();" style="width:auto;">Manage Discount</button><div id="id01" class="modal">  <form class="modal-content animate" action="action_page.php"><div class="container"><label for="Email"><b>Email:</b></label><input type="email" placeholder="Enter email" name="email" required><label for="psw"><b>Discount Wanted</b></label><input type="number" placeholder="Enter wanted discount" name="psw" required><label for="url:"><b>url:</b></label><input type="text" id="url" placeholder="url will here in a sec" name="url" value="" required><button type="submit">Add to cart</button></div><div class="container" style="background-color:#f1f1f1"><button type="button" onclick="hide();" class="cancelbtn">Cancel</button></div></form></div>';
+     echo   '<button onclick="disply();" style="width:auto;">Manage Discount</button><div id="id01" class="modal">  <form class="modal-content animate" action="action_page.php"><div class="container"><label for="Email"><b>Email:</b></label><input type="email" placeholder="Enter email" name="email" required><label for="psw"><b>Discount Wanted</b></label><input type="number" placeholder="Enter wanted discount" name="psw" required><label for="url:"><b>url:</b></label><input type="text" id="url" placeholder="url will here in a sec" name="url" value="" required readonly><button type="submit">Add to cart</button></div><div class="container" style="background-color:#f1f1f1"><button type="button" onclick="hide();" class="cancelbtn">Cancel</button></div></form></div>';
      echo'</div>';
      echo"</center>";
      echo'</div>';
