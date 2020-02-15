@@ -1,4 +1,4 @@
-<a href=""><img src="https://drive.google.com/file/d/1IU2Hwqk_N_ST4wxBCSI24ubsNulxlKjc/view?usp=sharing" title="Reckoner" alt="Reckoner"></a>
+<a href=""><img src="img/logo3.png" title="Reckoner" alt="Reckoner"></a>
 
 
 ***INSERT GRAPHIC HERE (include hyperlink in image)***
