@@ -60,6 +60,7 @@
 
 <!--<p id="demo">c</p>-->
 <?php
+
 if (isset($_GET['search'])) {
     echo "<script>
       document.getElementById('first_one').style.display='none';
@@ -95,7 +96,7 @@ if (isset($_GET['search'])) {
         $name = $link_xpath->query('//span[@id="productTitle"]');
 
 
-<<<<<<< HEAD
+
         function discount_calc($discount)
         {
             preg_match('/\([^\%]+/', $discount, $disc1);
@@ -138,83 +139,35 @@ if (isset($_GET['search'])) {
             $discount = $percent_t1[0]->nodeValue;
             $discount_final = discount_calc($discount);
         }
+
         echo "<div id='show_product'>";
         echo "<div class='prod_info'>";
         echo "NAME :" . $name_val . "<br>";
-        echo "PRICE :" . $price_val . "<br>";
-        echo "DISCOUNT: " . $discount_final . " %" . "<br>";
-        echo '</div>';
-        echo "<div class='img_info'>";
-        echo "<img height='250px' width='150px' src='$image_src1'>" . "<br>";
-        echo '</div>';
-        echo "<center>";
-        echo "<div class='bttn_prod'>";
-        echo   '<button onclick="disply();" style="width:auto;">Manage Discount</button><div id="id01" class="modal">  <form class="modal-content animate" action="action_page.php"><div class="container"><label for="Email"><b>Email:</b></label><input type="email" placeholder="Enter email" name="email" required><label for="psw"><b>Discount Wanted</b></label><input type="number" placeholder="Enter wanted discount" name="psw" required><label for="url:"><b>url:</b></label><input type="text" id="url" placeholder="url will here in a sec" name="url" value="" required readonly><button type="submit">Add to cart</button></div><div class="container" style="background-color:#f1f1f1"><button type="button" onclick="hide();" class="cancelbtn">Cancel</button></div></form></div>';
-        echo '</div>';
-        echo "</center>";
-        echo '</div>';
+        if (isset($price_val)) {
+            echo "PRICE :" . $price_val . "<br>";
+            // set_error_handler("customError");
+            echo "DISCOUNT: " . $discount_final . " %" . "<br>";
+            echo '</div>';
+            echo "<div class='img_info'>";
+            echo "<img height='250px' width='150px' src='$image_src1'>" . "<br>";
+            echo '</div>';
+            echo "<center>";
+            echo "<div class='bttn_prod'>";
+            echo   '<button onclick="disply();" style="width:auto;">Manage Discount</button><div id="id01" class="modal">  <form class="modal-content animate" action="action_page.php"><div class="container"><label for="Email"><b>Email:</b></label><input type="email" placeholder="Enter email" name="email" required><label for="psw"><b>Discount Wanted</b></label><input type="number" placeholder="Enter wanted discount" name="psw" required><label for="url:"><b>url:</b></label><input type="text" id="url" placeholder="url will here in a sec" name="url" value="" required readonly><button type="submit">Add to cart</button></div><div class="container" style="background-color:#f1f1f1"><button type="button" onclick="hide();" class="cancelbtn">Cancel</button></div></form></div>';
+            echo '</div>';
+            echo "</center>";
+            echo '</div>';
+        } else {
+            echo "<div class='img_info'>";
+            echo "<img height='250px' width='150px' src='$image_src1'>" . "<br>";
+            echo '</div>';
+            echo "<h1 font-color='red'>Not in stock</h1>";
+        }
+
+        //set error handler
+
     }
-=======
-     }
-     if($price->length>0)
-     {
-        $price_val=$price[0]->nodeValue;
-     }
-     if($price_deal->length>0)
-     {
-        $price_val=$price_deal[0]->nodeValue;
-     }
-        if($our_price->length>0)
-     {
-        $price_val=$our_price[0]->nodeValue;
-     }
-    if($price_book->length>0)
-     {
-        $price_val=$price_book[0]->nodeValue;
-     }
-     if($percent->length>0)
-     {
-        $discount=$percent[0]->nodeValue;
-        $discount_final= discount_calc($discount);
-     }
-    if($percent_books->length>0)
-     {
-        $discount=$percent_books[0]->nodeValue;
-        $discount_final= discount_calc($discount);
-     }
-    if($percent_t1->length>0)
-     {
-        $discount=$percent_t1[0]->nodeValue;
-        $discount_final= discount_calc($discount);
-     }
-     
-     echo"<div id='show_product'>";
-     echo"<div class='prod_info'>";
-     echo "NAME :".$name_val."<br>";
-     if(isset($prince_val)){
-     echo "PRICE :".$price_val."<br>";
-    // set_error_handler("customError");
-     echo "DISCOUNT: ".$discount_final." %"."<br>";
-     echo'</div>';
-     echo"<div class='img_info'>";
-     echo "<img height='250px' width='150px' src='$image_src1'>"."<br>";
-     echo'</div>';
-     echo"<center>";
-     echo"<div class='bttn_prod'>";
-     echo   '<button onclick="disply();" style="width:auto;">Manage Discount</button><div id="id01" class="modal">  <form class="modal-content animate" action="action_page.php"><div class="container"><label for="Email"><b>Email:</b></label><input type="email" placeholder="Enter email" name="email" required><label for="psw"><b>Discount Wanted</b></label><input type="number" placeholder="Enter wanted discount" name="psw" required><label for="url:"><b>url:</b></label><input type="text" id="url" placeholder="url will here in a sec" name="url" value="" required readonly><button type="submit">Add to cart</button></div><div class="container" style="background-color:#f1f1f1"><button type="button" onclick="hide();" class="cancelbtn">Cancel</button></div></form></div>';
-     echo'</div>';
-     echo"</center>";
-     echo'</div>';
-     }else{
-         echo"<div class='img_info'>";
-     echo "<img height='250px' width='150px' src='$image_src1'>"."<br>";
-     echo'</div>';
-        echo "<h1 font-color='red'>Not in stock</h1>";
-     }
-
-//set error handler
-
->>>>>>> 53b851fe83a35ceabf3307973f79c02d378b4912
 }
 include 'end.php';
+
 ?>
