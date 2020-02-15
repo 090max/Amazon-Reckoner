@@ -21,18 +21,19 @@
 - [Installation](#installation)
 - [Features](#features)
 - [Contributing](#contributing)
-- [Team](#team)
-- [FAQ](#faq)
-- [Support](#support)
 - [License](#license)
-
-
-
 
 ## Installation
 
 - All the `code` required to get started
 - Images of what it should look like
+
+
+## Features
+
+- Real time product discount notifier for www.amazon.in.
+- Notifies the intrested user when their product reaches their desired discount level.
+- Fast and easy to use.
 
 ### Clone
 
