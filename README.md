@@ -1,10 +1,5 @@
 <a href=""><img src="img/logo3.png" title="Reckoner" alt="Reckoner"></a>
 
-
-***INSERT GRAPHIC HERE (include hyperlink in image)***
-
-# Repository Title Goes Here
-
 > Subtitle or Short Description Goes Here
 
 > ideally one sentence
