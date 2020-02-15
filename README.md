@@ -1,10 +1,8 @@
 <a href=""><img src="img/logo3.png" title="Reckoner" alt="Reckoner"></a>
 
-> Subtitle or Short Description Goes Here
+> A real time discount tracker for all amazon.in products.
 
-> ideally one sentence
-
-> include terms/tags that can be searched
+> real time discount manager
 
 **Badges will go here**
 
