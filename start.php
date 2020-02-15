@@ -3,8 +3,8 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="icon.png">
-  <link rel="stylesheet" type="text/css" href="./start_style.css" />
+  <link rel="icon" href="./img/icon_main.png">
+  <link rel="stylesheet" type="text/css" href="./styles/start_style.css" />
   <title>Reckoner</title>
 
 </head>

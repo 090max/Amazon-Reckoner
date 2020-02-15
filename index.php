@@ -5,8 +5,8 @@
     <meta name="description" content="discount manager">
     <meta name="keywords" content="amazon,amazon discount,discount manager">
 
-    <link rel="icon" href="icon.png">
-    <link rel="stylesheet" type="text/css" href="./index_style.css" />
+    <link rel="icon" href="./img/icon_main.png">
+    <link rel="stylesheet" type="text/css" href="./styles/index_style.css" />
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <img src="img/logo3.png" id="image">
         <form class="search-container" method="get">
             <input type="text" id="search-bar" placeholder="Enter The Url of the item" name="search">
-            <img onclick="urlGetter();" id="butt" class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
+            <img onclick="urlGetter();" id="butt" class="search-icon" src="./img/icon.png">
         </form>
     </div>
     <script>
