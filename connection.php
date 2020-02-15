@@ -1,4 +1,4 @@
 <?php
- $connection= mysqli_connect("localhost","root","","reckoner");
-if(!$connection)
+ $conn= mysqli_connect("localhost","root","","reckoner");
+if(!$conn)
 	die('error'.mysqli_connect_error());
