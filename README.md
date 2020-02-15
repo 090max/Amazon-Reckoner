@@ -5,13 +5,12 @@
 > real time discount manager
 
 
+<a href=""><img src="img/1.png" title="Reckoner" alt="Reckoner"></a>
 
-***INSERT ANOTHER GRAPHIC HERE***
+<a href=""><img src="img/2.png" title="Reckoner" alt="Reckoner"></a>
 
-[![INSERT YOUR GRAPHIC HERE](http://i.imgur.com/dt8AUb6.png)]()
+<a href=""><img src="img/1.png" title="Reckoner" alt="Reckoner"></a>
 
-- Most people will glance at your `README`, *maybe* star it, and leave
-- Ergo, people should understand instantly what your project is about based on your repo
 
 > Tips
 
